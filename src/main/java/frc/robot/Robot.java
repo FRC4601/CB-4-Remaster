@@ -93,11 +93,11 @@ public class Robot extends TimedRobot {
     }
   // Intake Motors Control  
     if(xbox.getRawButton(2)) { //Intake Wheel
-      intakeMotor.set(1);
-    } else if (xbox.getRawButton(3)) {
-      intakeMotor.set(0.6); 
-    }  else {
       intakeMotor.set(0.6);
+    } else if (xbox.getRawButton(3)) {
+      intakeMotor.set(-0.6); 
+    }  else {
+      intakeMotor.set(0.0);
     }
 
   // Pneumatics Control
