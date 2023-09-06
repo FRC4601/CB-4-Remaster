@@ -58,8 +58,8 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
 
-    frontleftMotor.setInverted(true);
-    backleftMotor.setInverted(true);
+    frontrightMotor.setInverted(true);
+    backrightMotor.setInverted(true);
     
   }
 
@@ -86,16 +86,20 @@ public class Robot extends TimedRobot {
     drivetrain.tankDrive(leftstick.getY(), rightstick.getY());
 
   // Shooter Motors Control
-    if(xbox.getRawButton(5)) { // Shooter Wheel
+    if(xbox.getRawButton(6)) { // Shooter Wheel
       shooterMotor.set(1);
-    }  else {
-      shooterMotor.set(0.0);  
+    }  else if (xbox.getRawButton(5)) {
+      shooterMotor.set(-0.4);  
     }
+      else {
+      shooterMotor.set(0);
+    }
+
   // Intake Motors Control  
     if(xbox.getRawButton(2)) { //Intake Wheel
-      intakeMotor.set(0.6);
+      intakeMotor.set(0.4);
     } else if (xbox.getRawButton(3)) {
-      intakeMotor.set(-0.6); 
+      intakeMotor.set(-0.4); 
     }  else {
       intakeMotor.set(0.0);
     }
