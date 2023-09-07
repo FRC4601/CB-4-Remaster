@@ -87,9 +87,9 @@ public class Robot extends TimedRobot {
 
   // Shooter Motors Control
     if(xbox.getRawButton(6)) { // Shooter Wheel
-      shooterMotor.set(1);
+      shooterMotor.set(0.8);
     }  else if (xbox.getRawButton(5)) {
-      shooterMotor.set(-0.4);  
+      shooterMotor.set(-0.3);  
     }
       else {
       shooterMotor.set(0);
@@ -97,9 +97,9 @@ public class Robot extends TimedRobot {
 
   // Intake Motors Control  
     if(xbox.getRawButton(2)) { //Intake Wheel
-      intakeMotor.set(0.4);
+      intakeMotor.set(0.7);
     } else if (xbox.getRawButton(3)) {
-      intakeMotor.set(-0.4); 
+      intakeMotor.set(-0.7); 
     }  else {
       intakeMotor.set(0.0);
     }
