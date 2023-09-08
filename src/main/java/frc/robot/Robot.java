@@ -52,7 +52,7 @@ public class Robot extends TimedRobot {
 
    //Pneumatics
    //private final Compressor Kyle = new Compressor(0, PneumaticsModuleType.CTREPCM);
-   private final DoubleSolenoid solenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
+   private final DoubleSolenoid solenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 6, 7);
    
 
   @Override
@@ -105,9 +105,9 @@ public class Robot extends TimedRobot {
     }
 
   // Pneumatics Control
-    if(xbox.getRawButton(8)) { //Piston Extend
+    if(xbox.getRawButton(7)) { //Piston Extend
       solenoid.set(DoubleSolenoid.Value.kForward);
-    } else if(xbox.getRawButton(9)) { //Piston Retract
+    } else if(xbox.getRawButton(8)) { //Piston Retract
       solenoid.set(DoubleSolenoid.Value.kReverse);
    }
 
